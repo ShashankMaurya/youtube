@@ -105,7 +105,7 @@ class _MainPageState extends State<MainPage> {
                   backgroundImage: NetworkImage(user.coverPicture),
                 ),
                 title: Text(user.title),
-                contentPadding: EdgeInsets.all(10),
+                contentPadding: const EdgeInsets.all(10),
               ),
             ]),
           ]));
