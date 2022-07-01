@@ -93,19 +93,20 @@ class _MainPageState extends State<MainPage> {
           return Card(
               child: Column(children: <Widget>[
             Column(children: <Widget>[
-              ListTile(
-                leading: CircleAvatar(
-                  radius: 28,
-                  backgroundImage: NetworkImage(user.coverPicture),
-                ),
-                title: Text(user.title),
-              ),
               Stack(
                   alignment: FractionalOffset.bottomRight +
                       const FractionalOffset(-0.1, -0.1),
                   children: <Widget>[
                     videoply(vrl: user.videoUrl),
                   ]),
+              ListTile(
+                leading: CircleAvatar(
+                  radius: 28,
+                  backgroundImage: NetworkImage(user.coverPicture),
+                ),
+                title: Text(user.title),
+                contentPadding: EdgeInsets.all(10),
+              ),
             ]),
           ]));
         },
@@ -203,11 +204,11 @@ class _videoplyState extends State<videoply> {
       child: Column(
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.only(top: 20.0),
+            padding: const EdgeInsets.only(top: 10.0),
           ),
-          const Text('With assets mp4'),
+          // const Text('With assets mp4'),
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
             child: AspectRatio(
               aspectRatio: _controller.value.aspectRatio,
               child: Stack(
