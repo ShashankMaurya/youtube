@@ -56,7 +56,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           // backgroundColor: const Color(0xff885566),
           title: const Text('Youtube'),
-          centerTitle: true,
+          // centerTitle: true,
         ),
         body: Center(
             // child: buildUsers(users)
@@ -71,6 +71,22 @@ class _MainPageState extends State<MainPage> {
             }
           },
         )),
+        drawer: Drawer(
+           child: ListView(
+             children: const <Widget>[
+               UserAccountsDrawerHeader(
+                   accountName: Text("Shashank Maurya"),
+                   accountEmail: Text("shashankmaurya260101@gmail.com"),
+                   currentAccountPicture: CircleAvatar(
+                     // backgroundImage: NetworkImage("https://picsum.photos/800/450"),
+                     backgroundColor: Colors.brown,
+                     child: Text("S", style: TextStyle(fontSize: 40, color: Colors.white),
+                     ),
+                   ),
+               )
+             ],
+           ),
+        ),
       ),
     );
   }
@@ -104,7 +120,7 @@ class _MainPageState extends State<MainPage> {
                   radius: 28,
                   backgroundImage: NetworkImage(user.coverPicture),
                 ),
-                title: Text(user.title),
+                title: Text(user.title, style: const TextStyle(fontSize: 18)),
                 contentPadding: const EdgeInsets.all(10),
               ),
             ]),
