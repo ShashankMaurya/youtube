@@ -3,7 +3,7 @@
    <application
         android:label="youtube"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/youtube_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
